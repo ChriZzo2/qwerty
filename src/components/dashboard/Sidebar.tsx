@@ -1,12 +1,12 @@
-import logo from "@/assets/baseWhiteGroup.svg";
+import {BaseLogoWhite, AssistantLabTitleWhite} from "@/assets/Logos.tsx";
 import {SidebarContainer, Logo, NavItem} from "./Sidebar.styles";
 
 export const Sidebar = () => {
     return (
         <SidebarContainer>
             <Logo>
-                <img src={logo} alt="logo"/>
-                AssistantLab
+                <BaseLogoWhite/>
+                <AssistantLabTitleWhite/>
             </Logo>
             <nav>
                 <NavItem to="/dashboard/settings">Мои настройки</NavItem>

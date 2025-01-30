@@ -20,7 +20,7 @@ import {
 } from '@/components/auth/styles/RegisterForm.styles';
 import {ToastState} from "@/components/auth/types/register.types.ts";
 
-import logo from "@/assets/baseGroup.svg";
+import {AssistantLabTitle, BaseLogo} from "@/assets/Logos.tsx";
 
 
 export const RegisterForm = () => {
@@ -64,8 +64,8 @@ export const RegisterForm = () => {
             )}
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Logo>
-                    <img src={logo} alt="logo"/>
-                    AssistantLab
+                    <BaseLogo/>
+                    <AssistantLabTitle/>
                 </Logo>
 
                 <InputContainer>

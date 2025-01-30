@@ -9,7 +9,7 @@ import {Button} from "@/components/ui/Button.tsx";
 import {Toast} from '@/components/ui/Toast';
 import {ToastState} from "@/components/auth/types/register.types.ts";
 
-import logo from "@/assets/baseGroup.svg";
+import {AssistantLabTitle, BaseLogo} from "@/assets/Logos.tsx";
 import {
     Container,
     Form,
@@ -70,8 +70,8 @@ export const LoginForm = () => {
             )}
             <Form onSubmit={handleSubmit(onSubmit)}>
                 <Logo>
-                    <img src={logo} alt="logo"/>
-                    AssistantLab
+                    <BaseLogo/>
+                    <AssistantLabTitle/>
                 </Logo>
 
                 <InputContainer>

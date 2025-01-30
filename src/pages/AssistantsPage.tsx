@@ -12,8 +12,7 @@ import {
     StyledSpan
 } from "./styles/AssistantsPage.styles";
 
-import logo from "@/assets/baseGroup.svg";
-import plus from "@/assets/plus.svg";
+import {BaseLogo, PlusLogo} from "@/assets/Logos.tsx";
 
 export const AssistantsPage = () => {
     const assistants = [
@@ -48,7 +47,7 @@ export const AssistantsPage = () => {
             <Header>
                 <Title>Мои ассистенты</Title>
                 <AddButton>
-                    <img src={plus} alt=""/>
+                    <PlusLogo/>
                     <StyledSpan>Добавить ассистента</StyledSpan>
 
                 </AddButton>
@@ -74,7 +73,7 @@ export const AssistantsPage = () => {
                         </Td>
                         <Td>
                             <BotName>
-                                <img src={logo} alt=""/>
+                                <BaseLogo/>
                                 <span>{assistant.bot}</span>
                             </BotName>
                         </Td>
