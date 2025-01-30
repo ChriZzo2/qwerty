@@ -1,13 +1,13 @@
-import { Navigate, useLocation } from 'react-router-dom';
+import {Navigate, useLocation} from 'react-router-dom';
 import Cookies from 'js-cookie';
 
-export const PrivateRoute = ({ children }: { children: JSX.Element }) => {
-  const token = Cookies.get('token');
-  const location = useLocation();
+export const PrivateRoute = ({children}: { children: JSX.Element }) => {
+    const token = Cookies.get('token');
+    const location = useLocation();
 
-  if (!token) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
-  }
+    if (!token) {
+        return <Navigate to="/login" state={{from: location}} replace/>;
+    }
 
-  return children;
+    return children;
 };

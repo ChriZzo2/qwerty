@@ -9,12 +9,12 @@ export const SidebarContainer = styled.aside`
 `;
 
 export const Logo = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.8rem 1.2rem;
-  font-size: 15px;
-  font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    font-size: 15px;
+    font-weight: 700;
 
     background: rgb(72, 77, 90);
     color: white;

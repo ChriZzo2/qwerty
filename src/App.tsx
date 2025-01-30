@@ -1,16 +1,18 @@
 import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
-import {PrivateRoute} from './components/PrivateRoute';
-import {PublicRoute} from './components/PublicRoute';
-import {LoginForm} from './components/auth/LoginForm';
-import {DashboardLayout} from './layouts/DashboardLayout';
 import {Provider} from 'react-redux';
-import {store} from './store';
-import {SettingsPage} from './pages/SettingsPage';
-import {RegisterForm} from './components/auth/RegisterForm';
-import {AssistantsPage} from './pages/AssistantsPage';
-import {ChangePasswordPage} from './pages/ChangePasswordPage';
-import {SubscriptionPage} from './pages/SubscriptionPage';
-import GlobalStyles from "./styles/global.ts";
+
+import {DashboardLayout} from '@/layouts/DashboardLayout';
+import {store} from '@/store';
+import {SettingsPage} from "@/pages/SettingsPage.tsx";
+import {AssistantsPage} from '@/pages/AssistantsPage';
+import {ChangePasswordPage} from '@/pages/ChangePasswordPage';
+import {SubscriptionPage} from '@/pages/SubscriptionPage';
+import {PrivateRoute} from '@/components/PrivateRoute';
+import {PublicRoute} from '@/components/PublicRoute';
+import {LoginForm} from '@/components/auth/LoginForm';
+import {RegisterForm} from '@/components/auth/RegisterForm';
+
+import GlobalStyles from "@/styles/global.ts";
 
 function App() {
     return (

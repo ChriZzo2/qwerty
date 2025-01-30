@@ -16,7 +16,7 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   transition: all 0.2s ease;
   outline: none;
-  
+
   &:focus {
     outline: none;
     box-shadow: none;
@@ -25,7 +25,7 @@ export const Button = styled.button<ButtonProps>`
   &:active {
     outline: none;
   }
-  
+
   ${props => {
     switch (props.size) {
       case 'small':
@@ -43,18 +43,16 @@ export const Button = styled.button<ButtonProps>`
           padding: 10px 20px;
           font-size: 14px;
         `;
-      default: 
+      default:
         return `
           padding: 10px 30px;
           font-size: 14px;
         `;
     }
   }}
-  
   ${props => props.fullWidth && `
     width: 100%;
   `}
-  
   ${props => {
     switch (props.variant) {
       case 'secondary':
@@ -77,7 +75,7 @@ export const Button = styled.button<ButtonProps>`
             background: rgba(77, 105, 156, 0.1);
           }
         `;
-      default: 
+      default:
         return `
           background: rgb(77, 105, 156);
           border: none;
@@ -89,7 +87,6 @@ export const Button = styled.button<ButtonProps>`
         `;
     }
   }}
-
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;

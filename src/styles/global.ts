@@ -6,7 +6,7 @@ export default createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
-    
+
     :root {
         font-family: 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         line-height: 1.5;
@@ -21,6 +21,7 @@ export default createGlobalStyle`
         color: #646cff;
         text-decoration: inherit;
     }
+
     a:hover {
         color: #535bf2;
     }
