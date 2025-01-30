@@ -13,49 +13,53 @@ import {LoginForm} from '@/components/auth/LoginForm';
 import {RegisterForm} from '@/components/auth/RegisterForm';
 
 import GlobalStyles from "@/styles/global.ts";
+import {ThemeProvider} from "styled-components";
+import {theme} from "@/styles/theme.ts";
 
 function App() {
     return (
         <Provider store={store}>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Navigate to="/dashboard" replace/>}/>
-                    <Route
-                        path="/login"
-                        element={
-                            <PublicRoute>
-                                <LoginForm/>
-                            </PublicRoute>
-                        }
-                    />
-                    <Route
-                        path="/register"
-                        element={
-                            <PublicRoute>
-                                <RegisterForm/>
-                            </PublicRoute>
-                        }
-                    />
-                    <Route
-                        path="/dashboard"
-                        element={
-                            <PrivateRoute>
-                                <DashboardLayout/>
-                            </PrivateRoute>
-                        }
-                    >
-                        <Route path="settings" element={<SettingsPage/>}/>
-                        <Route path="assistants" element={<AssistantsPage/>}/>
-                        <Route path="change-password" element={<ChangePasswordPage/>}/>
-                        <Route path="subscription" element={<SubscriptionPage/>}/>
-                        <Route path="logs" element={<div>Logs Page</div>}/>
-                        <Route path="handbook" element={<div>Handbook Page</div>}/>
-                        <Route index element={<Navigate to="settings" replace/>}/>
-                    </Route>
-                    <Route path="*" element={<Navigate to="/dashboard" replace/>}/>
-                </Routes>
-            </BrowserRouter>
-            <GlobalStyles/>
+            <ThemeProvider theme={theme}>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Navigate to="/dashboard" replace/>}/>
+                        <Route
+                            path="/login"
+                            element={
+                                <PublicRoute>
+                                    <LoginForm/>
+                                </PublicRoute>
+                            }
+                        />
+                        <Route
+                            path="/register"
+                            element={
+                                <PublicRoute>
+                                    <RegisterForm/>
+                                </PublicRoute>
+                            }
+                        />
+                        <Route
+                            path="/dashboard"
+                            element={
+                                <PrivateRoute>
+                                    <DashboardLayout/>
+                                </PrivateRoute>
+                            }
+                        >
+                            <Route path="settings" element={<SettingsPage/>}/>
+                            <Route path="assistants" element={<AssistantsPage/>}/>
+                            <Route path="change-password" element={<ChangePasswordPage/>}/>
+                            <Route path="subscription" element={<SubscriptionPage/>}/>
+                            <Route path="logs" element={<div>Logs Page</div>}/>
+                            <Route path="handbook" element={<div>Handbook Page</div>}/>
+                            <Route index element={<Navigate to="settings" replace/>}/>
+                        </Route>
+                        <Route path="*" element={<Navigate to="/dashboard" replace/>}/>
+                    </Routes>
+                </BrowserRouter>
+                <GlobalStyles/>
+            </ThemeProvider>
         </Provider>
     );
 }

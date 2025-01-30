@@ -13,7 +13,7 @@ import {
 } from "./styles/AssistantsPage.styles";
 
 import logo from "@/assets/baseGroup.svg";
-import plus from "@/assets/plus.svg"
+import plus from "@/assets/plus.svg";
 
 export const AssistantsPage = () => {
     const assistants = [

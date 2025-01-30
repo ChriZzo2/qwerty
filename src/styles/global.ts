@@ -12,10 +12,6 @@ export default createGlobalStyle`
         line-height: 1.5;
     }
 
-    button {
-        font-family: inherit;
-    }
-
     a {
         font-weight: 500;
         color: #646cff;

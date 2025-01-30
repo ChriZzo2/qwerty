@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-interface ButtonProps {
+interface ButtonProps{
   variant?: 'primary' | 'secondary' | 'ghost';
   size?: 'small' | 'medium' | 'large';
   fullWidth?: boolean;
@@ -16,6 +16,7 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   transition: all 0.2s ease;
   outline: none;
+  font-family: inherit;
 
   &:focus {
     outline: none;
@@ -62,14 +63,14 @@ export const Button = styled.button<ButtonProps>`
           color: #333;
           
           &:hover {
-            background: #f5f5f5;
+            background: ${props.theme.colors.buttons.hover.secondary};
           }
         `;
       case 'ghost':
         return `
           background: transparent;
           border: none;
-          color: #4D699C;
+          color: ${props.theme.colors.primary};
           
           &:hover {
             background: rgba(77, 105, 156, 0.1);
@@ -77,12 +78,12 @@ export const Button = styled.button<ButtonProps>`
         `;
       default:
         return `
-          background: rgb(77, 105, 156);
+          background: ${props.theme.colors.primary};
           border: none;
           color: white;
           
           &:hover {
-            background: rgb(67, 91, 136);
+            background: ${props.theme.colors.buttons.hover.primary};
           }
         `;
     }
