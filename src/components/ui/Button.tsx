@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-interface ButtonProps {
+interface ButtonProps{
   variant?: 'primary' | 'secondary' | 'ghost';
   size?: 'small' | 'medium' | 'large';
   fullWidth?: boolean;
@@ -16,7 +16,8 @@ export const Button = styled.button<ButtonProps>`
   cursor: pointer;
   transition: all 0.2s ease;
   outline: none;
-  
+  font-family: inherit;
+
   &:focus {
     outline: none;
     box-shadow: none;
@@ -25,7 +26,7 @@ export const Button = styled.button<ButtonProps>`
   &:active {
     outline: none;
   }
-  
+
   ${props => {
     switch (props.size) {
       case 'small':
@@ -43,18 +44,16 @@ export const Button = styled.button<ButtonProps>`
           padding: 10px 20px;
           font-size: 14px;
         `;
-      default: 
+      default:
         return `
           padding: 10px 30px;
           font-size: 14px;
         `;
     }
   }}
-  
   ${props => props.fullWidth && `
     width: 100%;
   `}
-  
   ${props => {
     switch (props.variant) {
       case 'secondary':
@@ -64,32 +63,31 @@ export const Button = styled.button<ButtonProps>`
           color: #333;
           
           &:hover {
-            background: #f5f5f5;
+            background: ${props.theme.colors.buttons.hover.secondary};
           }
         `;
       case 'ghost':
         return `
           background: transparent;
           border: none;
-          color: #4D699C;
+          color: ${props.theme.colors.primary};
           
           &:hover {
             background: rgba(77, 105, 156, 0.1);
           }
         `;
-      default: 
+      default:
         return `
-          background: rgb(77, 105, 156);
+          background: ${props.theme.colors.primary};
           border: none;
           color: white;
           
           &:hover {
-            background: rgb(67, 91, 136);
+            background: ${props.theme.colors.buttons.hover.primary};
           }
         `;
     }
   }}
-
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
